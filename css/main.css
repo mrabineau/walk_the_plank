@@ -1,0 +1,32 @@
+/*h1 {
+  font-family: 'Ewert', cursive;
+}
+
+h2 {
+  font-family: 'Creepster', cursive;
+}
+*/
+
+#sky {
+  display: inline-block;
+  height: 200px;
+  position: relative;
+}
+
+#sun {
+  border: 1px solid yellow;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 50px;
+  width: 50%;
+}
+
+#ocean img{
+  display: inline-block;
+  margin-top: 50px;
+  position: absolute;
+  height: 300px;
+  width: 100%;
+
+ }
+
