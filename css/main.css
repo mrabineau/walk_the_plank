@@ -1,34 +1,93 @@
-/*h1 {
+*{
+  height: 20px;
+}
+
+#intro {
+  /*border: 1px groove black;*/
+  height: 100px;
+  width: 100px;
+  /*position: inline-block;*/
+  margin-left: 500px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
   font-family: 'Ewert', cursive;
+  flex-direction: row;
+  position: relative;
+  height: 10px;
+  width: 500px;
+
 }
 
 h2 {
   font-family: 'Creepster', cursive;
+  margin-top: 30px;
+  height: 50px;
+  width: 500px;
+
 }
-*/
+
+#all {
+  position: relative;
+  display: inline-block;
+}
 
 #sky {
   display: inline-block;
   height: 200px;
-  position: relative;
+  /*position: relative;*/
 }
 
 #sun {
-  border: 1px solid yellow;
-  background-color: yellow;
+/*  border: 5px groove yellow;
+*/  background-color: #FF6422;
   border-radius: 50%;
   height: 100px;
   width: 100px;
   position: absolute;
+  /*position: fixed;*/
   left: 500px;
+  top: 200px;
+
 }
 
 #ocean img{
   display: inline-block;
   margin-top: 50px;
   position: absolute;
+  position: fixed;
   height: 300px;
   width: 100%;
+  bottom: 0;
 
  }
+
+
+ #screen {
+  border: 1px solid black;
+  height: 50px;
+  width: 300px;
+  margin-left: 80px;
+  margin-top: 50px;
+  position: absolute;
+  background-color: rgba(42, 99, 255, .5);
+  font-family: 'Creepster', cursive;
+  font-size: 30px
+  /*position: fixed;*/
+ }
+/*
+ #ship  {
+  border: 1px solid #945739;
+  background-color: #402519;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  align-self: baseline;
+  margin-top: 30px;
+  margin-left: 900px;
+  border-bottom-left-radius: 50%;
+ }*/
+
 
