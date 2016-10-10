@@ -65,12 +65,15 @@ h2 {
  }
 
 
+
+
  #screen {
   border: 1px solid black;
   height: 50px;
   width: 300px;
   margin-left: 80px;
   margin-top: 50px;
+  margin-bottom: 200px;
   position: absolute;
   background-color: rgba(42, 99, 255, .5);
   font-family: 'Creepster', cursive;
