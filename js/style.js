@@ -1,15 +1,18 @@
 console.log("game!")
 
 
+
 var answer = ["S", "H", "I", "P"]
 var answer2 = ["P", "I", "R", "A", "T", "E"]
-// var guess = document.querySelector('#screen').textContent;
 var guess = ""
 var win = false
 var lose
 
+document.getElementById("onward").addEventListener("click", theAnswer)
+
+$("#onward").text('Take a guess matey')
+
 $("#screen").on('keydown', function (e) {
-  // console.log(e.keyCode)
   guess = String.fromCharCode(e.keyCode)
 
 })
@@ -17,20 +20,26 @@ $("#screen").on('keydown', function (e) {
 
 function theAnswer() {
   for (var i = 0; i < answer.length; i ++) {
-  if (guess === answer[0])
+  if (guess === answer[0]){
+    console.log("its true")
+    $("#onward").text('Nicely done Matey!!!')
     return true
-
-
-  document.querySelector("#screen").textContent = guess
 
   }
 
-    if (guess !== answer[0])
-    // this.remove(guess"0")
+    if (guess !== answer[0]){
+    console.log("its false")
+    $("#onward").text('Walk the plank!!')
+    return false
 
+    }
+
+    if (guess === null)
+    console.log("its empty")
+
+  }
 
 }
-
 
 
 theAnswer();
