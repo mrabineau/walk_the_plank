@@ -1,14 +1,19 @@
+body {
+    background: url(http://www.clipartkid.com/images/84/roger-pirate-flag-and-the-golden-age-of-piracy-skull-and-crossbones-27VGB1-clipart.gif);
 
+}
 
 
 #intro {
-  /*border: 1px groove black;*/
+  border: 1px groove black;
   height: 100px;
-  width: 500px;
+  width: 330px;
   /*position: inline-block;*/
   /*margin-left: 500px;*/
   /*justify-content: flex-start;*/
   align-items: center;
+  background: white;
+  padding: 0 0 0 0;
 }
 
 h1 {
@@ -17,6 +22,7 @@ h1 {
   position: relative;
   height: 10px;
   width: 500px;
+  padding: 0;
 
 }
 
@@ -25,7 +31,7 @@ h2 {
   margin-top: 30px;
   height: 50px;
   width: 500px;
-
+  padding: 0;
 }
 
 #all {
@@ -38,6 +44,7 @@ h2 {
   margin-left: 500px;
   border: 3px outset "dodgerblue";
 }
+
 
 #walking {
   position: relative;
