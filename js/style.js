@@ -2,14 +2,13 @@ console.log("game!")
 
 var wordBank = ["SHIP", "PIRATE", "BOOTY", "PEGLEG"]
 
-// var answer = ["S", "H", "I", "P"]
-// var answer2 = ["P", "I", "R", "A", "T", "E"]
 var answer;
 var guess = ""
 var empty = ""
 var win = false
 var lose
 var timer
+var letter = document.querySelectorAll('.letter')
 var pirate = document.querySelector('.materials.icons')
 document.getElementById("onward").addEventListener("click", theAnswer)
 
@@ -18,18 +17,31 @@ function setWord() {
   answer = wordBank[index].split('');
 }
 
-// var inOrderFunctionName = function() {
-//   console.log("this function cannot be invoked above");
-// }
+setWord();
 
-// function hoistedFunction() {
-//   console.log("this function can be invoked anywhere")
-// }
+function pickLetter () {
+  var character = $('.letter').on("click", function (evt){
+    $(evt.target).fadeOut();
+    console.log($(evt.target).text())
+  })
+
+}
+
+pickLetter ();
 
 
-$("body").on('keydown', function (e) {
-  console.log(e.keyCode)
-  guess = String.fromCharCode(e.keyCode)
+function moveLetter () {
+  var content = $('.letter').contents();
+  var wrapper = $('#screen')
+    $(content).append(wrapper);
+
+  }
+
+
+
+$("#letter").on('click', function (e) {
+  console.log(e.keydown)
+  guess = String.fromCharCode(e.keydown)
   for (var i = 0; i < answer.length; i++) {
     if (answer[i] === guess) {
       console.log("it's here!");
@@ -40,20 +52,9 @@ $("body").on('keydown', function (e) {
 })
 
 
-// function movePirate() {
-//   $("#pirate").style.top = 0;
-//   S(pirate).style.right = 20;
-// }
-
-// movePirate();
-
 function theAnswer() {
   for (var i = 0; i < answer.length; i ++){
     if (guess !== answer[i]){
-      // $("#onward").text('Walk the plank!!')
-      // setTimeout(function () {
-      //     $("#onward").text('Guess again!!')
-      // }, 2000)
       console.log("its false")
       return false
     }
@@ -63,8 +64,30 @@ function theAnswer() {
   };
 }
 
-// theAnswer();
+theAnswer();
 
+
+
+
+
+
+
+
+
+      // var answer = ["S", "H", "I", "P"]
+      // var answer2 = ["P", "I", "R", "A", "T", "E"]
+
+      // function movePirate() {
+      //   $("#pirate").style.top = 0;
+      //   S(pirate).style.right = 20;
+      // }
+
+      // movePirate();
+
+      // $("#onward").text('Walk the plank!!')
+      // setTimeout(function () {
+      //     $("#onward").text('Guess again!!')
+      // }, 2000)
     // $("#onward").text('Nicely done Matey!!!')
 
     // setTimeout(function () {
@@ -72,14 +95,10 @@ function theAnswer() {
     // }, 3000)
 
 
-// function theAnswer2() {
-//   for (var i = 0; i < answer.length; i ++) {
-//     if (guess[0] !== answer2[0])
-//       return false
-//   }
-// }
+    // var inOrderFunctionName = function() {
+    //   console.log("this function cannot be invoked above");
+    // }
 
-// theAnswer2();
-
-
-// onclick function
+    // function hoistedFunction() {
+    //   console.log("this function can be invoked anywhere")
+    // }
