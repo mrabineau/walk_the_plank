@@ -43,6 +43,7 @@ h2 {
   margin-bottom: 100px;
   margin-left: 500px;
   border: 3px outset "dodgerblue";
+  bottom: 100px;
 }
 
 
@@ -52,8 +53,9 @@ h2 {
 
 }
 
-.materials-icons {
+i {
   position: absolute;
+  top: 70px;
   margin-top: 100px;
   margin: auto;
   font-size: 100px;
@@ -69,6 +71,8 @@ h2 {
   position: inline-block;
   margin: absolute;
   justify-content: baseline;
+  top: 100px;
+
 }
 
 #screen {
