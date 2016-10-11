@@ -10,7 +10,9 @@ var lose
 var timer
 var letter = document.querySelectorAll('.letter')
 var pirate = document.querySelector('.materials.icons')
+
 document.getElementById("onward").addEventListener("click", theAnswer)
+
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -19,37 +21,33 @@ function setWord() {
 
 setWord();
 
+
+
 function pickLetter () {
   var character = $('.letter').on("click", function (evt){
     $(evt.target).fadeOut();
-    console.log($(evt.target).text())
+    $('#screen').append(evt.target.innerHTML);
+    console.log(evt.target.innerHTML);
   })
 
-}
+};
 
 pickLetter ();
-
-
-function moveLetter () {
-  var content = $('.letter').contents();
-  var wrapper = $('#screen')
-    $(content).append(wrapper);
-
-  }
 
 
 
 $("#letter").on('click', function (e) {
   console.log(e.keydown)
-  guess = String.fromCharCode(e.keydown)
+   guess = String.prototype.charAt(e.click)
   for (var i = 0; i < answer.length; i++) {
     if (answer[i] === guess) {
       console.log("it's here!");
-      return;
+      return true;
     }
   }
   console.log("not there!")
 })
+
 
 
 function theAnswer() {
