@@ -1,14 +1,13 @@
-*{
-  height: 20px;
-}
+
+
 
 #intro {
   /*border: 1px groove black;*/
   height: 100px;
-  width: 100px;
+  width: 500px;
   /*position: inline-block;*/
-  margin-left: 500px;
-  justify-content: flex-start;
+  /*margin-left: 500px;*/
+  /*justify-content: flex-start;*/
   align-items: center;
 }
 
@@ -29,79 +28,62 @@ h2 {
 
 }
 
-#onward {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  position: absolute;
-  margin-left: 100px;
-  text-align: center;
-
- }
-
 #all {
-  /*position: relative;*/
-  display: inline-block;
+  position: relative;
 }
 
-#sky {
-  display: inline-block;
-  height: 200px;
-  /*position: relative;*/
-}
-
-#sun {
-/*  border: 5px groove yellow;
-*/  background-color: #FF6422;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
+#onward {
   position: absolute;
-  /*position: fixed;*/
-  left: 500px;
-  top: 200px;
+  margin-bottom: 100px;
+  margin-left: 500px;
+  border: 3px outset "dodgerblue";
+}
+
+#walking {
+  position: relative;
+  margin-top: 50px;
+
+}
+
+.materials-icons {
+  position: absolute;
+  margin-top: 100px;
+  margin: auto;
+  font-size: 100px;
+
+}
+
+#plank img {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid black;
+  position: inline-block;
+  margin: absolute;
+  justify-content: baseline;
+}
+
+#screen {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  margin-left: 500px;
+  font-family: 'Creepster', cursive;
+  font-size: 30px
 
 }
 
 #ocean img{
   display: inline-block;
   margin-top: 50px;
-  position: absolute;
+  position: relative;
   position: fixed;
   height: 300px;
   width: 100%;
   bottom: 0;
 
  }
-
-
-
-
- #screen {
-  border: 1px solid black;
-  height: 50px;
-  width: 300px;
-  margin-left: 80px;
-  margin-top: 50px;
-  margin-bottom: 200px;
-  position: absolute;
-  background-color: rgba(42, 99, 255, .5);
-  font-family: 'Creepster', cursive;
-  font-size: 30px
-  /*position: fixed;*/
- }
-/*
- #ship  {
-  border: 1px solid #945739;
-  background-color: #402519;
-  height: 150px;
-  width: 150px;
-  position: relative;
-  align-self: baseline;
-  margin-top: 30px;
-  margin-left: 900px;
-  border-bottom-left-radius: 50%;
- }*/
 
 
 

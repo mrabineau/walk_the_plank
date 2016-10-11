@@ -1,0 +1,121 @@
+Main css copy
+
+*{
+  /*height: 20px;*/
+}
+
+#intro {
+  /*border: 1px groove black;*/
+  height: 100px;
+  width: 100px;
+  /*position: inline-block;*/
+  margin-left: 500px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Ewert', cursive;
+  flex-direction: row;
+  position: relative;
+  height: 10px;
+  width: 500px;
+
+}
+
+h2 {
+  font-family: 'Creepster', cursive;
+  margin-top: 30px;
+  height: 50px;
+  width: 500px;
+
+}
+
+#onward {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  position: absolute;
+  margin-left: 800px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 500px;
+
+
+ }
+
+#all {
+  /*position: relative;*/
+  display: block;
+  position: relative;
+  margin: auto;
+  position: static;
+}
+
+#sky {
+  display: inline-block;
+  height: 200px;
+  /*position: relative;*/
+}
+
+#plank img{
+  display: inline-block;
+  height: 30px;
+  width: 300px;
+  border: 1px solid black;
+  position: absolute;
+  justify-content: flex-start;
+  position: flex;
+  position: static;
+  padding-left: 10px 10px 10px 0;
+  margin-top: 150px;
+
+}
+
+ #screen {
+  border: 1px solid black;
+  height: 50px;
+  width: 300px;
+  margin-left: 500px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  position: relative;
+  background-color: rgba(42, 99, 255, .5);
+  font-family: 'Creepster', cursive;
+  font-size: 30px
+  /*position: fixed;*/
+ }
+
+#ocean img{
+  display: inline-block;
+  margin-top: 50px;
+  position: relative;
+  position: fixed;
+  height: 300px;
+  width: 100%;
+  bottom: 0;
+
+ }
+
+
+
+#ocean #sun{
+/*  border: 5px groove yellow;
+*//*background-color: #FF6422;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;*/
+  /*position: static;
+  display: inline-block;
+  margin-left: auto;
+  overflow: hidden;*/
+  /*position: fixed;*/
+  /*position: absolute;
+  position: fixed;
+  left: 500px;
+  top: 200px;
+  bottom: 500px;
+  display: inline-block;
+  padding; 0;
+
+}*/

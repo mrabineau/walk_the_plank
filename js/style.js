@@ -5,12 +5,13 @@ console.log("game!")
 var answer = ["S", "H", "I", "P"]
 var answer2 = ["P", "I", "R", "A", "T", "E"]
 var guess = ""
+var empty = ""
 var win = false
 var lose
-
+var timer
+var pirate = document.querySelector('.materials.icons')
 document.getElementById("onward").addEventListener("click", theAnswer)
 
-$("#onward").text('Take a guess matey')
 
 $("#screen").on('keydown', function (e) {
   guess = String.fromCharCode(e.keyCode)
@@ -18,32 +19,45 @@ $("#screen").on('keydown', function (e) {
 })
 
 
+// function movePirate() {
+//   $(pirate).style.top = 0;
+//   S(pirate).style.right = 20;
+// }
+
+// movePirate();
+
 function theAnswer() {
-  for (var i = 0; i < answer.length; i ++) {
-  if (guess === answer[0]){
-    console.log("its true")
-    $("#onward").text('Nicely done Matey!!!')
-    return true
-
-  }
-
+  for (var i = 0; i < answer.length; i ++){
     if (guess !== answer[0]){
+    // $("#onward").text('Walk the plank!!')
+    // setTimeout(function () {
+    //     $("#onward").text('Guess again!!')
+    // }, 2000)
+
     console.log("its false")
-    $("#onward").text('Walk the plank!!')
     return false
 
     }
 
-    if (guess === null)
-    console.log("its empty")
 
-  }
+    }
 
+
+   if (guess === answer[0]) {
+
+    console.log("its true")
+    $("#onward").text('Nicely done Matey!!!')
+
+    setTimeout(function () {
+        $("#onward").text('Guess again!')
+    }, 3000)
+
+    }
 }
 
-
 theAnswer();
-// guess[0].onkyepress=function()
+
+
 
 function theAnswer2() {
   for (var i = 0; i < answer.length; i ++) {
