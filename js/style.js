@@ -1,9 +1,9 @@
 console.log("game!")
 
-var wordBank = ["SHIP", "PIRATE", "BOOTY", "PEGLEG"]
+var wordBank = ["SHIP", "PIRATE", "AHOY", "RUM"]
 
 var answer
-var guess = document.querySelector('#screen').innerHTML
+var guess = document.querySelectorAll('.letter').innerHTML
 var empty = ""
 var win = false
 var lose
@@ -45,6 +45,8 @@ function theAnswer() {
         setTimeout(function() {
           $('#welldone').hide()
         },3000)
+      storage.correct.push(guess)
+      winCheck();
       return true
       }
     }
@@ -54,13 +56,13 @@ function theAnswer() {
           setTimeout(function () {
           $("#onward").text('Guess again!')
       }, 4000)
-      $("#onward").text('Delete ye shameful guess!!')
       right();
       $('#wrong').toggle(1000);
         setTimeout(function() {
           $('#wrong').hide()
         },3000)
       console.log("its false")
+      storage.incorrect.push(guess)
       return false
 
       }
@@ -73,21 +75,47 @@ var pickLetter = function() {
    $('.letter').on("click", function (evt){
     $(evt.target).fadeOut();
     guess = $(evt.target).text();
-    $('#screen').append(evt.target.innerHTML);
+    // $('#screen').append(evt.target.innerHTML);
+    theAnswer();
     console.log(evt.target.innerHTML);
     })
-  }
+
+    }
 
 pickLetter ();
 
 
-//move this to pickLetter();
 
-$(".letter").on('click', function (e) {
-  guess = $(e.target).text();
-  theAnswer();
+var storage = {
+  correct: [],
+  incorrect: []
+};
 
-})
+var lose = {guesses: ["0","1","2","3","4","5","6","7","8","9"]}
+
+
+function winCheck() {
+  if (storage.correct.length === answer.length){
+    console.log("win")
+    return true
+  }
+  if (storage.incorrect.length === lose.guesses.length){
+    console.log("lose")
+    return false
+  }
+}
+
+
+winCheck();
+
+// function winCheck() {
+//   for (var i = 0; i < answer.length; i++){
+
+//     }
+//   }
+// }
+
+// winCheck();
 
 //$('.letter').fadeIn()
 

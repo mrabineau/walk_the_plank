@@ -34,6 +34,10 @@ h2 {
   padding: 0;
 }
 
+.letter {
+
+}
+
 #all {
   position: relative;
 }
@@ -77,15 +81,6 @@ h2 {
 
 }
 
-#screen {
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  margin-left: 500px;
-  font-family: 'Creepster', cursive;
-  font-size: 30px
-
-}
 
 #ocean img{
   display: inline-block;
@@ -119,3 +114,12 @@ h2 {
   width: 250px;
 
 }
+/*#screen {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  margin-left: 500px;
+  font-family: 'Creepster', cursive;
+  font-size: 30px
+
+}*/
