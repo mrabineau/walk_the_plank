@@ -31,41 +31,44 @@ function right() {
   $('#pirate').animate({left: '+=30px'}, 2000);
 };
 
-
+function down() {
+  $('#pirate').animate({bottom: '-=700px'}, 2000)
+};
 
 function theAnswer() {
+
   for (var i = 0; i < answer.length; i ++){
     if (guess === answer[i]){
       console.log("its true")
       $("#onward").text('Nicely done Matey!!!')
-        setTimeout(function () {
-      $("#onward").text('Guess again!')
-    }, 3000)
+      setTimeout(function () {
+        $("#onward").text('Guess again!')
+      }, 3000)
       $('#welldone').toggle(1000);
-        setTimeout(function() {
-          $('#welldone').hide()
-        },3000)
+      setTimeout(function() {
+        $('#welldone').hide()
+      },3000)
       storage.correct.push(guess)
       winCheck();
       return true
-      }
     }
+  }
+  if(answer.indexOf(guess) < 0){
+    $("#onward").text('Walk the plank!!')
+        setTimeout(function () {
+        $("#onward").text('Guess again!')
+    }, 4000)
+    right();
+    $('#wrong').toggle(1000);
+      setTimeout(function() {
+        $('#wrong').hide()
+      },3000)
+    console.log("its false")
+    storage.incorrect.push(guess)
+     winCheck();
+    return false
 
-      if(guess !== answer[0]){
-      $("#onward").text('Walk the plank!!')
-          setTimeout(function () {
-          $("#onward").text('Guess again!')
-      }, 4000)
-      right();
-      $('#wrong').toggle(1000);
-        setTimeout(function() {
-          $('#wrong').hide()
-        },3000)
-      console.log("its false")
-      storage.incorrect.push(guess)
-      return false
-
-      }
+  }
 }
 
 
@@ -91,15 +94,15 @@ var storage = {
   incorrect: []
 };
 
-var lose = {guesses: ["0","1","2","3","4","5","6","7","8","9"]}
+var lose = {guesses: ["0","1","2","3","4","5","6","7"]}
 
 
 function winCheck() {
   if (storage.correct.length === answer.length){
     console.log("win")
-    return true
   }
   if (storage.incorrect.length === lose.guesses.length){
+    down();
     console.log("lose")
     return false
   }
@@ -108,16 +111,7 @@ function winCheck() {
 
 winCheck();
 
-// function winCheck() {
-//   for (var i = 0; i < answer.length; i++){
 
-//     }
-//   }
-// }
-
-// winCheck();
-
-//$('.letter').fadeIn()
 
 
 
