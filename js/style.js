@@ -2,7 +2,7 @@ console.log("game!")
 
 var wordBank = ["SHIP", "PIRATE", "BOOTY", "PEGLEG"]
 
-var answer;
+var answer
 var guess = document.querySelector('#screen').innerHTML
 var empty = ""
 var win = false
@@ -26,20 +26,11 @@ setWord();
 
 
 
-function pickLetter () {
-  var character = $('.letter').on("click", function (evt){
-    $(evt.target).fadeOut();
-    $('#screen').append(evt.target.innerHTML);
-    console.log(evt.target.innerHTML);
-  })
-
-};
-
-pickLetter ();
 
 function right() {
-  $('#pirate').animate({left: '+=50px'}, 2000);
+  $('#pirate').animate({left: '+=30px'}, 2000);
 };
+
 
 
 function theAnswer() {
@@ -57,11 +48,13 @@ function theAnswer() {
       return true
       }
     }
+
       if(guess !== answer[0]){
       $("#onward").text('Walk the plank!!')
           setTimeout(function () {
-          $("#onward").text('Guess again!!')
-      }, 3000)
+          $("#onward").text('Guess again!')
+      }, 4000)
+      $("#onward").text('Delete ye shameful guess!!')
       right();
       $('#wrong').toggle(1000);
         setTimeout(function() {
@@ -70,11 +63,25 @@ function theAnswer() {
       console.log("its false")
       return false
 
-  }
+      }
 }
 
 
 
+
+var pickLetter = function() {
+   $('.letter').on("click", function (evt){
+    $(evt.target).fadeOut();
+    guess = $(evt.target).text();
+    $('#screen').append(evt.target.innerHTML);
+    console.log(evt.target.innerHTML);
+    })
+  }
+
+pickLetter ();
+
+
+//move this to pickLetter();
 
 $(".letter").on('click', function (e) {
   guess = $(e.target).text();
@@ -82,6 +89,7 @@ $(".letter").on('click', function (e) {
 
 })
 
+//$('.letter').fadeIn()
 
 
 
@@ -91,25 +99,5 @@ $(".letter").on('click', function (e) {
 
 
 
-      // $(i).animate({
-      //   backgroundPositionX: "+=100px"});
-
-      // var answer = ["S", "H", "I", "P"]
-      // var answer2 = ["P", "I", "R", "A", "T", "E"]
-
-      // function movePirate() {
-      //   $("#pirate").style.top = 0;
-      //   S(pirate).style.right = 20;
-      // }
-
-      // movePirate();
 
 
-
-    // var inOrderFunctionName = function() {
-    //   console.log("this function cannot be invoked above");
-    // }
-
-    // function hoistedFunction() {
-    //   console.log("this function can be invoked anywhere")
-    // }
