@@ -3,16 +3,18 @@ console.log("game!")
 var wordBank = ["SHIP", "PIRATE", "BOOTY", "PEGLEG"]
 
 var answer;
-var guess = ""
+var guess = document.querySelector('#screen').innerHTML
 var empty = ""
 var win = false
 var lose
 var timer
 var letter = document.querySelectorAll('.letter')
 var pirate = document.querySelector('.materials.icons')
+var counter =
 
 document.getElementById("onward").addEventListener("click", theAnswer)
 
+$('#welldone').hide();
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -36,33 +38,40 @@ pickLetter ();
 
 
 
-$("#letter").on('click', function (e) {
-  console.log(e.keydown)
-   guess = String.prototype.charAt(e.click)
-  for (var i = 0; i < answer.length; i++) {
-    if (answer[i] === guess) {
-      console.log("it's here!");
-      return true;
+function theAnswer() {
+  for (var i = 0; i < answer.length; i ++){
+    if (guess === answer[i]){
+      console.log("its true")
+      $("#onward").text('Nicely done Matey!!!')
+        setTimeout(function () {
+      $("#onward").text('Guess again!')
+    }, 3000)
+      $('#welldone').toggle(1000);
+        setTimeout(function() {
+          $('#welldone').hide()
+        },3000)
+      return true
+      }
     }
+  if(guess !== answer[0]){
+    console.log("its false")
+
+  return false
+
   }
-  console.log("not there!")
+}
+
+
+
+
+$(".letter").on('click', function (e) {
+  guess = $(e.target).text();
+  theAnswer();
+
 })
 
 
 
-function theAnswer() {
-  for (var i = 0; i < answer.length; i ++){
-    if (guess !== answer[i]){
-      console.log("its false")
-      return false
-    }
-  }
-  if (guess === answer[i]) {
-    console.log("its true")
-  };
-}
-
-theAnswer();
 
 
 
@@ -70,7 +79,8 @@ theAnswer();
 
 
 
-
+      // $(i).animate({
+      //   backgroundPositionX: "+=100px"});
 
       // var answer = ["S", "H", "I", "P"]
       // var answer2 = ["P", "I", "R", "A", "T", "E"]
@@ -86,11 +96,6 @@ theAnswer();
       // setTimeout(function () {
       //     $("#onward").text('Guess again!!')
       // }, 2000)
-    // $("#onward").text('Nicely done Matey!!!')
-
-    // setTimeout(function () {
-    //   $("#onward").text('Guess again!')
-    // }, 3000)
 
 
     // var inOrderFunctionName = function() {
