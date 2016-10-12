@@ -15,6 +15,7 @@ var counter =
 document.getElementById("onward").addEventListener("click", theAnswer)
 
 $('#welldone').hide();
+$('#wrong').hide();
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -36,6 +37,9 @@ function pickLetter () {
 
 pickLetter ();
 
+function right() {
+  $('#pirate').animate({left: '+=50px'}, 2000);
+};
 
 
 function theAnswer() {
@@ -53,10 +57,18 @@ function theAnswer() {
       return true
       }
     }
-  if(guess !== answer[0]){
-    console.log("its false")
-
-  return false
+      if(guess !== answer[0]){
+      $("#onward").text('Walk the plank!!')
+          setTimeout(function () {
+          $("#onward").text('Guess again!!')
+      }, 3000)
+      right();
+      $('#wrong').toggle(1000);
+        setTimeout(function() {
+          $('#wrong').hide()
+        },3000)
+      console.log("its false")
+      return false
 
   }
 }
@@ -92,10 +104,6 @@ $(".letter").on('click', function (e) {
 
       // movePirate();
 
-      // $("#onward").text('Walk the plank!!')
-      // setTimeout(function () {
-      //     $("#onward").text('Guess again!!')
-      // }, 2000)
 
 
     // var inOrderFunctionName = function() {
