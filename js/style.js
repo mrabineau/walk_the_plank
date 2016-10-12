@@ -32,7 +32,7 @@ function right() {
 };
 
 function down() {
-  $('#pirate').animate({bottom: '-=700px'}, 2000)
+  $('#pirate').animate({bottom: '-=700px'}, 5000)
 };
 
 function theAnswer() {
@@ -99,10 +99,14 @@ var lose = {guesses: ["0","1","2","3","4","5","6","7"]}
 
 function winCheck() {
   if (storage.correct.length === answer.length){
-    console.log("win")
+    $('#textbox').text("winner!" + "   " + answer)
+    $("#onward").remove();
+     console.log("win")
   }
   if (storage.incorrect.length === lose.guesses.length){
     down();
+    $('#textbox').text("Womp womp" + "   " + answer)
+    $("#onward").remove();
     console.log("lose")
     return false
   }

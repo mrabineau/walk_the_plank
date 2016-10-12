@@ -81,6 +81,30 @@ h2 {
 
 }
 
+#textbox {
+  position: relative;
+  left: 500px;
+  border: 1px solid black;
+  height: 100px;
+  width: 300px;
+  flex-wrap: wrap;
+  background-color: rgba(90,213,255,.5);
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Ewert', cursive;
+
+}
+
+.result #welldone{
+  justify-content: center;
+  top: 150px;
+  left: 300px;
+  bottom: 100px;
+  height: 150px;
+  width: 50px;
+
+
+}
 
 #ocean img{
   display: inline-block;
@@ -93,26 +117,24 @@ h2 {
 
  }
 
-
-
-.result #welldone {
-  position: relative;
+#welldone {
+  /*position: relative;
   top: 150px;
   left: 300px;
   bottom: 100px;
   height: 150px;
-  width: 250px;
+  width: 250px;*/
 
 }
 
-.result #wrong {
-  position: relative;
+#wrong {
+  /*position: relative;
   top: 150px;
   left: 300px;
   bottom: 100px;
   height: 150px;
   width: 250px;
-
+*/
 }
 /*#screen {
   position: absolute;
