@@ -1,6 +1,6 @@
 console.log("game!")
 
-var wordBank = ["SHIP", "PIRATE", "AHOY", "RUM"]
+var wordBank = ["SHIP", "PIRATE", "AHOY", "RUM", "PLANK", "SHARK", "WRECK", "POLYNESIA", "SEA", "OCEAN"]
 
 var answer
 var guess = document.querySelectorAll('.letter').innerHTML
@@ -46,7 +46,7 @@ function theAnswer() {
       $("#onward").text('Nicely done Matey!!!')
       setTimeout(function () {
         $("#onward").text('Guess again!')
-      }, 5000)
+      }, 4000)
       $('#welldone').toggle(2000);
       setTimeout(function() {
         $('#welldone').fadeOut(2000)
@@ -61,7 +61,7 @@ function theAnswer() {
     $("#onward").text('Walk the plank!!')
         setTimeout(function () {
         $("#onward").text('Guess again!')
-    }, 5000)
+    }, 4000)
     right();
     $('#wrong').toggle(2000);
       setTimeout(function() {
@@ -108,15 +108,15 @@ function winCheck() {
     $("#onward").remove();
     // $("#reset").toggle();
      $("#disco").toggle();
-     $('#welldone').toggle();
+     $('#welldone').remove();
      console.log("win")
   }
   if (storage.incorrect.length === lose.guesses.length){
     down();
+    $('#wrong').remove();
     $('#textbox').text("Womp womp" + "   " + answer)
     $("#onward").remove();
     // $("#reset").toggle();
-    $('#wrong').toggle();
     $("#sad").toggle();
     console.log("lose")
     return false

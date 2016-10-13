@@ -144,19 +144,6 @@ h2 {
 
 }
 
-#reset {
-  font-family: 'Creepster', cursive;
-  height: 40px;
-  width: 40px;
-  border: 5px groove white;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  position: relative;
-  display: flex;
-  margin: auto;
-
-}
 
 .result {
   display: inherit;
@@ -216,6 +203,195 @@ h2 {
   width: 100%;
   bottom: 0;
 }
+
+
+@media (max-width:480px) {
+  body {
+    background: url(http://www.clipartkid.com/images/84/roger-pirate-flag-and-the-golden-age-of-piracy-skull-and-crossbones-27VGB1-clipart.gif)
+    no-repeat fixed center;
+    margin: auto;
+  }
+  #intro {
+    display: inherit;
+    margin: auto;
+    border: 5px dashed white;
+    background-color: black;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    border-radius: 3%;
+  }
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  h1 {
+    margin: auto;
+    bottom: 30px;
+    top: 0;
+    align-items: initial;
+    flex-direction: row;
+    font-family: 'Ewert', cursive;
+    width: 250px;
+    padding: initial;
+    height: initial;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-family: 'Creepster', cursive;
+    margin-top: auto;
+    width: 200px;
+    box-sizing: content-box;
+    bottom: 30px;
+    left: 25%;
+    font-size: 20px;
+  }
+
+#keyboard {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+    position: relative;
+    align-items: space-between;
+  }
+
+  .letter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    position: relative;
+    align-items: space-between;
+    font-family: 'Creepster', cursive;
+    height: 40px;
+    width: 40px;
+    border: 5px groove white;
+    background-color: black;
+    color: white;
+    font-size: 20px
+
+}
+
+  #onward.letter {
+    font-family: 'Creepster', cursive;
+    height: 100px;
+    width: 90px;
+    border: 5px groove white;
+    background-color: black;
+    color: red;
+    font-size: 25px;
+
+  }
+
+
+
+  #pirate {
+    position: absolute;
+    top: 40px;
+    margin-top: 30px;
+    height: 30px;
+    width: 40px;
+    font-size: 30px;
+  }
+
+  #plank img {
+    position: relative;
+    display: flex;
+    height: 30px;
+    width: 50%;
+    max-width: 100px;
+    border: 1px solid black;
+    position: inline-block;
+    margin: absolute;
+    justify-content: flex-start;
+    top: 100px;
+  }
+
+  #textbox.screens {
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    margin-top: -30px;
+    align-items: center;
+    border: 1px solid black;
+    height: 50px;
+    width: 150px;
+    flex-wrap: wrap;
+    background-color: rgba(90,213,255,.5);
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Ewert', cursive;
+  }
+
+  #incorrect.screens {
+    position: relative;
+    display: flex;
+    margin-left: 200px;
+    border: 1px solid black;
+    height: 50px;
+    width: 150px;
+    background-color: rgba(229,34,41,.5);
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    justify-content: space-around;
+  }
+
+  .result {
+    margin: auto;
+    position: relative;
+    right: 2px;
+    bottom: 100px;
+    align-items: center;
+  }
+
+  #disco.result {
+    margin-top: 5px;
+    height: 350px;
+    width: 350px;
+  }
+
+  #sad.result {
+    margin-top: 5px;
+    height: 350px;
+    width: 350px;
+  }
+
+
+  #welldone.result {
+    height: 175px;
+    width: 150px;
+  }
+
+  #wrong.result {
+    height: 175px;
+    width: 150px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
