@@ -17,6 +17,8 @@ document.getElementById("onward").addEventListener("click", theAnswer)
 $('#welldone').hide();
 $('#wrong').hide();
 $("#reset").hide();
+$("#sad").hide();
+$("#disco").hide();
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -33,7 +35,7 @@ function right() {
 };
 
 function down() {
-  $('#pirate').animate({bottom: '-=700px'}, 5000)
+  $('#pirate').animate({bottom: '-=1000px'}, 5000)
 };
 
 function theAnswer() {
@@ -44,11 +46,11 @@ function theAnswer() {
       $("#onward").text('Nicely done Matey!!!')
       setTimeout(function () {
         $("#onward").text('Guess again!')
-      }, 3000)
+      }, 5000)
       $('#welldone').toggle(2000);
       setTimeout(function() {
         $('#welldone').fadeOut(2000)
-      },3000)
+      },2000)
       storage.correct.push(guess)
       $("#textbox").text(storage.correct)
       winCheck();
@@ -59,12 +61,12 @@ function theAnswer() {
     $("#onward").text('Walk the plank!!')
         setTimeout(function () {
         $("#onward").text('Guess again!')
-    }, 4000)
+    }, 5000)
     right();
     $('#wrong').toggle(2000);
       setTimeout(function() {
         $('#wrong').fadeOut(2000)
-      },3000);
+      },2000);
     console.log("its false")
     storage.incorrect.push(guess)
     $("#incorrect").text(storage.incorrect)
@@ -104,14 +106,18 @@ function winCheck() {
   if (storage.correct.length === answer.length){
     $('#textbox').text("winner!" + "   " + answer)
     $("#onward").remove();
-    $("#reset").toggle();
+    // $("#reset").toggle();
+     $("#disco").toggle();
+     $('#welldone').toggle();
      console.log("win")
   }
   if (storage.incorrect.length === lose.guesses.length){
     down();
     $('#textbox').text("Womp womp" + "   " + answer)
     $("#onward").remove();
-    $("#reset").toggle();
+    // $("#reset").toggle();
+    $('#wrong').toggle();
+    $("#sad").toggle();
     console.log("lose")
     return false
   }
