@@ -33,8 +33,10 @@ h1 {
   flex-direction: row;
   font-family: 'Ewert', cursive;
   width: 500px;
-  padding: inherit;
+  padding: initial;
+  padding-left: 30px;
   height: initial;
+  margin-bottom: 40px;
 
 
 }
@@ -166,7 +168,8 @@ h2 {
 #sad.result {
   height: 300px;
   width: 300px;
-  right: 250px;
+  right: 220px;
+  margin-top: 20px;
 }
 
 
