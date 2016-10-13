@@ -5,33 +5,46 @@ body {
 
 
 #intro {
+  display: inherit;
+  margin: auto;
   border: 1px groove black;
   height: 100px;
-  width: 330px;
-  /*position: inline-block;*/
-  /*margin-left: 500px;*/
-  /*justify-content: flex-start;*/
+  width: 400px;
   align-items: center;
   background: white;
-  padding: 0 0 0 0;
+  padding: 20px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 h1 {
-  font-family: 'Ewert', cursive;
+
+  margin: auto;
+  bottom: 50px;
+  top: 1px;
+  align-items: initial;
   flex-direction: row;
-  position: relative;
-  height: 10px;
+  font-family: 'Ewert', cursive;
   width: 500px;
-  padding: 0;
+  padding: inherit;
+  height: initial;
+
 
 }
 
 h2 {
   font-family: 'Creepster', cursive;
-  margin-top: 30px;
-  height: 50px;
-  width: 500px;
-  padding: 0;
+  margin-top: auto;
+  width: 200px;
+  box-sizing: content-box;
+  bottom: 30px;
+  left: 25%;
+  font-size: 35px;
+
 }
 
 .letter {
@@ -121,7 +134,7 @@ h2 {
   height: 80px;
   width: 80px;
   border: 1px solid black;
-  visibility: hidden;
+
  }
 
 #welldone {
