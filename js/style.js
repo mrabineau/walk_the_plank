@@ -16,6 +16,7 @@ document.getElementById("onward").addEventListener("click", theAnswer)
 
 $('#welldone').hide();
 $('#wrong').hide();
+$("#reset").hide();
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -101,12 +102,14 @@ function winCheck() {
   if (storage.correct.length === answer.length){
     $('#textbox').text("winner!" + "   " + answer)
     $("#onward").remove();
+    $("#reset").toggle();
      console.log("win")
   }
   if (storage.incorrect.length === lose.guesses.length){
     down();
     $('#textbox').text("Womp womp" + "   " + answer)
     $("#onward").remove();
+    $("#reset").toggle();
     console.log("lose")
     return false
   }
@@ -116,7 +119,9 @@ function winCheck() {
 winCheck();
 
 
-
+function resetGame () {
+  $("#reset").on("click").reset();
+}
 
 
 

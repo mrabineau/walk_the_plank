@@ -117,6 +117,13 @@ h2 {
 
  }
 
+ #reset {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  visibility: hidden;
+ }
+
 #welldone {
   /*position: relative;
   top: 150px;
