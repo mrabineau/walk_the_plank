@@ -45,11 +45,12 @@ function theAnswer() {
       setTimeout(function () {
         $("#onward").text('Guess again!')
       }, 3000)
-      $('#welldone').toggle(1000);
+      $('#welldone').toggle(2000);
       setTimeout(function() {
-        $('#welldone').hide()
+        $('#welldone').fadeOut(2000)
       },3000)
       storage.correct.push(guess)
+      $("#textbox").text(storage.correct)
       winCheck();
       return true
     }
@@ -60,12 +61,13 @@ function theAnswer() {
         $("#onward").text('Guess again!')
     }, 4000)
     right();
-    $('#wrong').toggle(1000);
+    $('#wrong').toggle(2000);
       setTimeout(function() {
-        $('#wrong').hide()
-      },3000)
+        $('#wrong').fadeOut(2000)
+      },3000);
     console.log("its false")
     storage.incorrect.push(guess)
+    $("#incorrect").text(storage.incorrect)
      winCheck();
     return false
 

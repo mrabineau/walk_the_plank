@@ -144,15 +144,40 @@ h2 {
 
 }
 
-.result #welldone{
-  justify-content: center;
-  top: 150px;
-  left: 300px;
-  bottom: 100px;
-  height: 150px;
-  width: 50px;
+.result {
+  display: inherit;
+  margin: auto;
+  position: relative;
+  right: 250px;
+  bottom: 300px;
+  align-items: center;
+}
+
+#welldone.result {
+  height: 300px;
+  width: 250px;
 
 
+}
+
+#wrong.result {
+  height: 300px;
+  width: 250px;
+
+}
+
+#incorrect {
+  position: relative;
+  display: flex;
+  margin-left: 800px;
+  border: 1px solid black;
+  height: 100px;
+  width: 300px;
+  background-color: rgba(229,34,41,.5);
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  justify-content: space-around;
 }
 
 #ocean img{
@@ -164,8 +189,7 @@ h2 {
   height: 300px;
   width: 100%;
   bottom: 0;
-
- }
+}
 
  #reset {
   height: 80px;
@@ -184,15 +208,6 @@ h2 {
 
 }
 
-#wrong {
-  /*position: relative;
-  top: 150px;
-  left: 300px;
-  bottom: 100px;
-  height: 150px;
-  width: 250px;
-*/
-}
 /*#screen {
   position: absolute;
   width: 200px;
