@@ -1,6 +1,6 @@
 console.log("game!")
 
-var wordBank = ["SHIP", "PIRATE", "AHOY", "RUM", "PLANK", "SHARK", "WRECK", "POLYNESIA", "SEA", "OCEAN"]
+var wordBank = ["SHIP", "PIRATE", "AHOY", "RUM", "PLANK", "SHARK", "WRECK", "POLYNESIA", "SEA", "OCEAN", "PLUNDER", "GOLD", "FISH"]
 
 var answer
 var guess = document.querySelectorAll('.letter').innerHTML
@@ -31,7 +31,7 @@ setWord();
 
 
 function right() {
-  $('#pirate').animate({left: '+=11%'}, 2000);
+  $('#pirate').animate({left: '+=10%'}, 2000);
 };
 
 function down() {
@@ -99,7 +99,7 @@ var storage = {
   incorrect: []
 };
 
-var lose = {guesses: ["0","1","2","3","4","5","6","7"]}
+var lose = {guesses: ["0","1","2","3","4","5","6","7", "8", "9"]}
 
 
 function winCheck() {

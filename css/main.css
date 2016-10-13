@@ -7,6 +7,7 @@ body {
 #intro {
   display: inherit;
   margin: auto;
+  margin-top: 10px;
   border: 5px dashed white;
   background-color: black;
   height: 100px;
@@ -141,6 +142,8 @@ h2 {
   font-size: 35px;
   text-align: center;
   font-family: 'Ewert', cursive;
+  justify-content: space-around;
+
 
 }
 
@@ -163,6 +166,7 @@ h2 {
 #sad.result {
   height: 300px;
   width: 300px;
+  right: 250px;
 }
 
 

@@ -4,7 +4,7 @@ Walk the Plank is essentially your classic hangman. But with pirates.
 
 Your goal is to guess the given word correctly, before your pirate is forced to walk off the the plank and into the unforgiving waters of the South Pacific. 
 
-You are allowed eight incorrect guesses. 
+You are allowed ten incorrect guesses. 
 
 Make your guess by clicking on one of the letter buttons at the top of the screen. Once you press a button, it’s button form will disappear and the letter will reappear in either the blue or red box, depending on whether your guess is correct or incorrect. This way you can keep track of what you’ve tried. 
 
