@@ -31,7 +31,7 @@ setWord();
 
 
 function right() {
-  $('#pirate').animate({left: '+=30px'}, 2000);
+  $('#pirate').animate({left: '+=11%'}, 2000);
 };
 
 function down() {

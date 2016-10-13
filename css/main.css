@@ -97,7 +97,7 @@ h2 {
 #walking {
   position: relative;
   margin-top: 50px;
-
+  max-width: 300px;
 }
 
  #pirate {
@@ -293,7 +293,11 @@ h2 {
 
   }
 
-
+  #walking {
+    position: relative;
+    margin-top: 50px;
+    max-width: 100px;
+  }
 
   #pirate {
     position: absolute;
@@ -308,7 +312,7 @@ h2 {
     position: relative;
     display: flex;
     height: 30px;
-    width: 50%;
+    width: 100%;
     max-width: 100px;
     border: 1px solid black;
     position: inline-block;
