@@ -36,3 +36,7 @@ Also, hints will be included if it seems you are struggling.
 Potentially, the game will eventually be broken into different levels based on word complexity.
 
 Also, sounds will be incorporated. 
+
+Gist Link
+
+https://gist.github.com/mrabineau/9220bd1e15d27d320adfef43a6e4a7e3
