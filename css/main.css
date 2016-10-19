@@ -52,6 +52,23 @@ h2 {
 
 }
 
+p {
+   font-family: 'Creepster', cursive;
+   font-size: 15px;
+   background-color: black;
+   color: white;
+   border: 1px solid white;
+   letter-spacing: 3px;
+}
+
+#now {
+   font-family: 'Creepster', cursive;
+   font-size: 20px;
+   background-color: black;
+   color: red;
+
+}
+
 #keyboard {
   display: flex;
   flex-wrap: wrap;
@@ -212,7 +229,7 @@ h2 {
 }
 
 
-@media (max-width:480px) {
+@media only screen and (max-width:480px) {
   body {
     background: url(http://www.clipartkid.com/images/84/roger-pirate-flag-and-the-golden-age-of-piracy-skull-and-crossbones-27VGB1-clipart.gif)
     no-repeat fixed center;

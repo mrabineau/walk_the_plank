@@ -83,7 +83,6 @@ var pickLetter = function() {
    $('.letter').on("click", function (evt){
     $(evt.target).fadeOut();
     guess = $(evt.target).text();
-    // $('#screen').append(evt.target.innerHTML);
     theAnswer();
     console.log(evt.target.innerHTML);
     })
@@ -99,14 +98,13 @@ var storage = {
   incorrect: []
 };
 
-var lose = {guesses: ["0","1","2","3","4","5","6","7", "8", "9"]}
+var lose = {guesses: ["0","1","2","3","4","5","6","7", "8", "9", "10","11"]}
 
 
 function winCheck() {
   if (storage.correct.length === answer.length){
     $('#textbox').text("winner!" + "   " + answer)
     $("#onward").remove();
-    // $("#reset").toggle();
      $("#disco").toggle();
      $('#welldone').remove();
      console.log("win")
@@ -116,7 +114,6 @@ function winCheck() {
     $('#wrong').remove();
     $('#textbox').text("Womp womp" + "   " + answer)
     $("#onward").remove();
-    // $("#reset").toggle();
     $("#sad").toggle();
     console.log("lose")
     return false
