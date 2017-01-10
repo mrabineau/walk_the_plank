@@ -19,6 +19,7 @@ $('#wrong').hide();
 $("#reset").hide();
 $("#sad").hide();
 $("#disco").hide();
+$('#rules').hide();
 
 function setWord() {
   var index = Math.floor(Math.random() * wordBank.length);
@@ -27,7 +28,13 @@ function setWord() {
 
 setWord();
 
+function instruction() {
+  $('#rules').toggle();
+}
 
+$('#show').on("click",(instruction))
+
+$('#close').on("click", (instruction))
 
 
 function right() {
